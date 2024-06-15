@@ -69,22 +69,22 @@ while True:
                 s_pressed = False
                 
         if decoded_data == "A":
-            if not w_pressed:
+            if not a_pressed:
                 pyautogui.keyDown('a')
-                w_pressed = True
+                a_pressed = True
         else:
-            if w_pressed:
+            if a_pressed:
                 pyautogui.keyUp('a')
-                w_pressed = False
+                a_pressed = False
 
         if decoded_data == "D":
-            if not s_pressed:
+            if not d_pressed:
                 pyautogui.keyDown('d')
-                s_pressed = True
+                d_pressed = True
         else:
-            if s_pressed:
+            if d_pressed:
                 pyautogui.keyUp('d')
-                s_pressed = False
+                d_pressed = False
 
     except UnicodeDecodeError:
         print("UnicodeDecodeError: 데이터 디코딩 오류 발생")
